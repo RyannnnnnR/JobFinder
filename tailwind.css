@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.icon:hover~#info {
+    display: block;
+    transition: 250ms ease-in-out;
+}
