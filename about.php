@@ -21,7 +21,7 @@
                 </div>
             <div class="flex h-full" >
                 
-                <div class="w-1/2 flex flex-col mr-20">
+                <div class="w-1/2 flex flex-col mr-16">
                     <div style="height:25%;">
                     <div class="rounded-md shadow-lg">
                         <div class="flex rounded-md bg-white shadow-xs p-4">
