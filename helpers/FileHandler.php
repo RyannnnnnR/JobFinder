@@ -23,6 +23,7 @@
         public function readFile($fileName)
         {
             $fileName =  self::ROOT_DIR.$fileName;
+            if(!file_exists($fileName)) return [];
             $handle = fopen($fileName, "r"); // open the file in read mode
             $contents = file_get_contents($fileName);
             $tmp = explode(PHP_EOL, $contents);

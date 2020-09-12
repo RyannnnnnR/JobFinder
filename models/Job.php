@@ -7,7 +7,25 @@
         private $jobTitle;
         private $description;
         private $fullTime;
-        private $applicationBy;
+        private $contract;
+
+        /**
+         * @return mixed
+         */
+        public function getContract()
+        {
+            return $this->contract;
+        }
+
+        /**
+         * @param mixed $contract
+         */
+        public function setContract($contract): void
+        {
+            $this->contract = $contract;
+        }
+        private $applicationByMail;
+        private $applicationByPost;
         private $closingDate;
         private $location;
 
@@ -138,7 +156,8 @@
 
         public function __toString()
         {
-            return "$this->posId,$this->jobTitle,$this->description,$this->closingDate,$this->location,$this->fullTime,$this->applicationBy";
+            return serialize($this);
+//            return "$this->posId,$this->jobTitle,$this->description,$this->closingDate,$this->location,$this->fullTime,$this->applicationBy";
         }
 
         /**
@@ -158,5 +177,58 @@
             return $this;
         }
 
+        public function get($type){
+            switch ($type){
+                case "title":
+                    return strtolower($this->getJobTitle());
+                case "closingDate":
+                    return $this->getClosingDate();
+                case "position":
+                    return $this->getFullTime();
+                case "contract":
+                    return $this->getContract();
+                case "mail":
+                    return $this->getApplicationByMail();
+                case "post":
+                    return $this->getApplicationByPost();
+            }
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getApplicationByMail()
+        {
+            return $this->applicationByMail;
+        }
+
+        /**
+         * @param mixed $applicationByMail
+         */
+        public function setApplicationByMail($applicationByMail): void
+        {
+            $this->applicationByMail = $applicationByMail;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getApplicationByPost()
+        {
+            return $this->applicationByPost;
+        }
+
+        /**
+         * @param mixed $applicationByPost
+         */
+        public function setApplicationByPost($applicationByPost): void
+        {
+            $this->applicationByPost = $applicationByPost;
+        }
+
+        public static function fromString($entry): Job
+        {
+           return unserialize($entry);
+        }
 
     }

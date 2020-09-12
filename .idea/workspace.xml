@@ -20,13 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b11082c-3c2e-4fb4-bd81-12c933c393e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advancedsearchform.php" beforeDir="false" afterPath="$PROJECT_DIR$/advancedsearchform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assign1/jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/assign1/jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/FileHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/FileHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/JobsHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/JobsHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postjobform.php" beforeDir="false" afterPath="$PROJECT_DIR$/postjobform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Job.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchjobform.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchjobform.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchjobprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchjobprocess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchjobsform.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -66,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599883984373</updated>
-      <workItem from="1599883986248" duration="3225000" />
+      <workItem from="1599883986248" duration="14311000" />
     </task>
     <servers />
   </component>
@@ -97,26 +101,27 @@
       <screen x="0" y="23" width="1440" height="787" />
     </state>
     <state x="184" y="78" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.787@0.23.1440.787" timestamp="1599889105433" />
-    <state x="523" y="105" key="#com.intellij.ide.util.MemberChooser" timestamp="1599888813904">
-      <screen x="0" y="23" width="1440" height="787" />
+    <state x="523" y="106" key="#com.intellij.ide.util.MemberChooser" timestamp="1599907165123">
+      <screen x="0" y="23" width="1440" height="796" />
     </state>
     <state x="523" y="105" key="#com.intellij.ide.util.MemberChooser/0.23.1440.787@0.23.1440.787" timestamp="1599888813904" />
-    <state width="1358" height="188" key="GridCell.Tab.0.bottom" timestamp="1599890771575">
+    <state x="523" y="106" key="#com.intellij.ide.util.MemberChooser/0.23.1440.796@0.23.1440.796" timestamp="1599907165123" />
+    <state width="679" height="188" key="GridCell.Tab.0.bottom" timestamp="1599898691191">
       <screen x="0" y="23" width="1440" height="787" />
     </state>
-    <state width="1358" height="188" key="GridCell.Tab.0.bottom/0.23.1440.787@0.23.1440.787" timestamp="1599890771575" />
-    <state width="1358" height="188" key="GridCell.Tab.0.center" timestamp="1599890771575">
+    <state width="679" height="188" key="GridCell.Tab.0.bottom/0.23.1440.787@0.23.1440.787" timestamp="1599898691191" />
+    <state width="679" height="188" key="GridCell.Tab.0.center" timestamp="1599898691188">
       <screen x="0" y="23" width="1440" height="787" />
     </state>
-    <state width="1358" height="188" key="GridCell.Tab.0.center/0.23.1440.787@0.23.1440.787" timestamp="1599890771575" />
-    <state width="1358" height="188" key="GridCell.Tab.0.left" timestamp="1599890771574">
+    <state width="679" height="188" key="GridCell.Tab.0.center/0.23.1440.787@0.23.1440.787" timestamp="1599898691188" />
+    <state width="679" height="188" key="GridCell.Tab.0.left" timestamp="1599898691187">
       <screen x="0" y="23" width="1440" height="787" />
     </state>
-    <state width="1358" height="188" key="GridCell.Tab.0.left/0.23.1440.787@0.23.1440.787" timestamp="1599890771574" />
-    <state width="1358" height="188" key="GridCell.Tab.0.right" timestamp="1599890771575">
+    <state width="679" height="188" key="GridCell.Tab.0.left/0.23.1440.787@0.23.1440.787" timestamp="1599898691187" />
+    <state width="679" height="188" key="GridCell.Tab.0.right" timestamp="1599898691191">
       <screen x="0" y="23" width="1440" height="787" />
     </state>
-    <state width="1358" height="188" key="GridCell.Tab.0.right/0.23.1440.787@0.23.1440.787" timestamp="1599890771575" />
+    <state width="679" height="188" key="GridCell.Tab.0.right/0.23.1440.787@0.23.1440.787" timestamp="1599898691191" />
     <state x="221" y="55" key="SettingsEditor" timestamp="1599891291942">
       <screen x="0" y="23" width="1440" height="787" />
     </state>
