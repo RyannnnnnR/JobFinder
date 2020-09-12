@@ -8,9 +8,8 @@
     <title>About</title>
 </head>
 <body class="h-full">
+    <div class="h-full flex items-center flex-col">
     <?php include('partials/navbar.php') ?>
-    <div class="h-full flex justify-center items-center flex-col">
-
         <div class="container h-full">
             <div class="w-full flex items-center justify-center">
             <form class="form w-2/3 mt-12" method="POST">
@@ -18,8 +17,8 @@
                 <p class="text-indigo-600 mt-2 mb-10">This information will be used to create a new job posting.</p>
                 <div class="flex flex-col">
                     <label for="posId" class="text-lg leading-5 font-medium text-gray-700">Position ID</label>
-                    <div class="mt-1 max-w-xs">
-                        <div class="rounded-md shadow-sm">
+                    <div class="mt-1 w-1/5">
+                        <div class="rounded-md shadow-sm w-full">
                             <input type="text" name="posId" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="P0001"/>
                         </div>
                     </div>
@@ -27,18 +26,29 @@
 
                 <div class="flex flex-col mt-6">
                     <label for="posId" class="text-lg leading-5 font-medium text-gray-700">Job Title</label>
-                    <div class="max-w-lg mt-1">
-                        <div class="rounded-md shadow-sm">
+                    <div class="w-1/2 mt-1">
+                        <div class="rounded-md shadow-sm w-full">
                             <input type="text" name="posId" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="Software Engineer"/>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex flex-col mt-6">
-                <p class="text-lg leading-5 font-medium text-gray-700">Job State</label>
 
-                    <div class="max-w-xs mt-1">
-                        <div class="rounded-md shadow-sm relative">
+                <div class="flex flex-col mt-6">
+                    <label for="description" class="text-lg leading-5 font-medium text-gray-700">Description</label>
+                    <div class="w-3/4 mt-1">
+                        <div class="rounded-md shadow-sm w-full">
+                            <textarea type="text" name="posId" id="" rows="5"class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2"></textarea>
+                        </div>
+                        <p class="text-gray-600 mt-2">A brief description about the job.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mt-6">
+                <label class="text-lg leading-5 font-medium text-gray-700">Location</label>
+
+                    <div class="w-1/3 mt-1">
+                        <div class="rounded-md shadow-sm relative w-full">
                             <select name="cars" id="cars" class="mt-2 w-full py-2 appearance-none bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2">
                                 <option value="volvo">---</option>
                                 <option value="2">VIC</option>
@@ -46,29 +56,20 @@
                                 <option value="mercedes">NT</option>
                                 <option value="audi">WA</option>
                             </select>
-                            <div class="pointer-events-none absolute mt-2 mr-1 flex flex-col inset-y-0 right-0 items-center justify-center px-2 text-gray-500">
-                                <svg class="fill-current h-4 w-4 transform rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                                <svg class="fill-current h-4 w-4 -mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                            </div>
+                            <span class="pointer-events-none absolute mt-2 mr-1 flex flex-col inset-y-0 right-0 items-center justify-center px-2 text-gray-500">
+                                <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
                         </div>
                     </div>
                     
                 </div>
-
-                <div class="flex flex-col mt-6">
-                    <label for="description" class="text-lg leading-5 font-medium text-gray-700">Description</label>
-                    <div class="max-w-xl mt-1">
-                        <div class="rounded-md shadow-sm">
-                            <textarea type="text" name="posId" id="" rows="4"class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2"></textarea>
-                        </div>
-                        <p class="text-gray-600 mt-2">A brief description about the job.</p>
-                    </div>
-                </div>
                 
                 <div class="flex flex-col mt-6">
                 <label for="description" class="text-lg leading-5 font-medium text-gray-700">Closing Date</label>
-                    <div class="max-w-xs mt-1">
-                        <div class="rounded-md shadow-sm">
+                    <div class="w-1/3 mt-1">
+                        <div class="rounded-md shadow-sm w-full">
                             <input type="date" name="posId" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" />
                         </div>
                     </div>
@@ -99,7 +100,7 @@
                 </div>
 
                 <div class="flex flex-col mt-6">
-                    <p class="text-lg leading-5 font-medium text-gray-700">Application Delivery</label>
+                    <label class="text-lg leading-5 font-medium text-gray-700">Application Delivery</label>
                         <div class="mt-1">
                             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" class="mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
                             <label for="vehicle1" class="text-sm font-medium leading-5 text-gray-700">Post</label>

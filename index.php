@@ -8,7 +8,21 @@
     <title>Job Postings</title>
 </head>
 <body class="h-full">
-    <div class="h-full flex justify-center items-center flex-col relative">
+    <?php
+        include ('models/Job.php');
+        include("helpers/FileHandler.php");
+        $job = new Job();
+        $job->setPosId("P001")
+            ->setJobTitle("Software Engineer")
+            ->setDescription("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod omnis obcaecati ducimus non? Eveniet illo voluptate eligendi fugit pariatur soluta consequatur nostrum? Optio consequuntur qui delectus non labore. Sapiente, dolor!")
+            ->setLocation("Victoria")
+            ->setClosingDate("10/10/2020")
+            ->setFullTime(true)
+            ->setApplicationBy(["Mail", "Post"]);
+        FileHandler::getInstance()->writeFile("jobs.txt", $job);
+        echo FileHandler::getInstance()->readFile("jobs.txt")[0];
+    ?>
+    <div class="h-full flex items-center flex-col relative">
     <?php include('partials/navbar.php') ?>
     <div class="container h-full relative">
         <div class="flex justify-center items-center h-full -m-4" >
