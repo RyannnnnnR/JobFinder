@@ -21,14 +21,15 @@
                 <div class="info w-2/3 mt-12">
                     <h1 class="text-3xl leading-9 font-bold text-gray-900 pl-2">Job Postings</h1>
                     <?php
-
+                        // Log search
+                        JobsHandler::getInstance()->logRecentSearch($_GET['title']);
                         $jobs = JobsHandler::getInstance()->filterJobs($_GET);
                         echo "<h3 class='text-lg leading-5 font-medium text-gray-600 mb-12 mt-1 pl-2'>Found ",count($jobs)," jobs...</h3>";
                     ?>
                     <?php foreach ($jobs as $job) { ?>
                         <a href="jobdetails.php?posId=<?php echo $job->getPosId(); ?>">
                         <div class="rounded-lg shadow-sm">
-                            <div class="flex justify-between items-center rounded-lg px-6 py-4 shadow-xs bg-white">
+                            <div class="flex justify-between items-center rounded-lg px-6 py-4 shadow-xs bg-white mt-6">
                                 <div class="space-y-6">
                                     <div class="space-y-1">
                                         <h3 class="text-lg leading-7 font-semibold text-indigo-600"><?php echo $job->getJobTitle()?></h3>

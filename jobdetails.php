@@ -10,42 +10,60 @@
 <body class="h-full">
     
     <div class="h-full flex items-center flex-col">
-    <?php include('partials/navbar.php') ?>
+    <?php
+        include('partials/navbar.php');
+        include('helpers/JobsHandler.php');
+    ?>
         <div class="container h-full">
             <div class="w-full flex items-center justify-center">
-                <div class="info w-2/3 mt-12">
+                <div class="info w-2/3 mt-8">
                     <p class="text-2xl leading-5 font-bold text-gray-700">Job Detail Information</p>
                     <p class="text-sm text-indigo-600 mt-2 mb-4 border-b border-gray-400 pb-6">Full details of job posting</p>
-                    <!-- <div  class="inline-flex w-full border-b border-gray-400 pb-5">
-                    </div> -->
                     <table class="table-auto">
                         <tbody>
+                        <?php
+                            $job = JobsHandler::getInstance()->getJobByPositionId($_GET['posId']);
+                            if ($job == null) {
+                                echo "Cannot find job";
+                                return;
+                            }
+                        ?>
                         <tr class="border-b border-gray-400">
                                 <td class="pb-4 w-64 inline-block">Position ID</td>
-                                <td class="pb-4 px-10 text-gray-700">P0001</td>
+                                <td class="pb-4 px-10 text-gray-700 w-full"><?php echo $job->getPosId() ?></td>
                             </tr>
                             <tr class="border-b border-gray-400">
                                 <td class="py-4 w-64 inline-block">Job Title</td>
-                                <td class="py-4 px-10 text-gray-700">Software Engingeer</td>
+                                <td class="py-4 px-10 text-gray-700"><?php echo $job->getJobTitle() ?></td>
                             </tr>
                             <tr class="border-b border-gray-400">
                                 <td class="py-4 w-64 inline-block">Location</td>
-                                <td class="py-4 px-10 text-gray-700">Victoria</td>
+                                <td class="py-4 px-10 text-gray-700"><?php echo $job->getLocation() ?></td>
                             </tr>
                             <tr class="border-b border-gray-400">
                                 <td class="py-4 w-64 inline-block">Closing Date</td>
-                                <td class="py-4 px-10 text-gray-700">10/10/2020</td>
+                                <td class="py-4 px-10 text-gray-700"><?php echo $job->getClosingDate() ?></td>
                             </tr>
                             <tr class="border-b border-gray-400">
                                 <td class="py-4 w-64 inline-block">About</td>
-                                <td class="py-4 px-10 text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod omnis obcaecati ducimus non? Eveniet illo voluptate eligendi fugit pariatur soluta consequatur nostrum? Optio consequuntur qui delectus non labore. Sapiente, dolor!</td>
+                                <td class="py-4 px-10 text-gray-700"><?php echo $job->getDescription() ?></td>
                             </tr>
                             <tr class="border-b border-gray-400">
                                 <td class="py-4 w-64 inline-block">Position</td>
                                 <td class="py-4 px-10 text-gray-700">
                                     <ul class="list-disc text-indigo-400">
                                         <li>
-                                            <span class="text-black">Full Time</span>
+                                            <span class="text-black"><?php echo $job->getFullTime() ? "Full Time" : "Part Time" ?></span>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="py-4 w-64 inline-block">Contract</td>
+                                <td class="py-4 px-10 text-gray-700">
+                                    <ul class="list-disc text-indigo-400">
+                                        <li>
+                                            <span class="text-black"><?php echo $job->getContract() ? "On-Going" : "Fixed Term" ?></span>
                                         </li>
                                     </ul>
                                 </td>
@@ -54,9 +72,16 @@
                                 <td class="pt-6 w-64 inline-block">Application By</td>
                                 <td class="pt-6 px-10 text-gray-700">
                                     <ul class="list-disc text-indigo-400">
-                                        <li>
-                                            <span class="text-black">Email</span>
-                                        </li>
+                                        <?php if ($job->getApplicationByEMail()) { ?>
+                                            <li>
+                                                <span class="text-black">Email</span>
+                                            </li>
+                                        <? } ?>
+                                        <?php if ($job->getApplicationByPost()) { ?>
+                                            <li>
+                                                <span class="text-black">Post</span>
+                                            </li>
+                                        <? } ?>
                                     </ul>
                                 </td>
                             </tr>

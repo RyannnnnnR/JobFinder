@@ -26,34 +26,25 @@
     <?php
         include("helpers/JobsHandler.php");
         $searches = JobsHandler::getInstance()->getRecentJobSearches();
-    if(!empty($searches)){ ?>
-    <div class="recent-searches text-gray-700">
-        <h2 class="text-lg mb-2">Recent Searches:</h2>
-        <div class="rounded-md shadow-lg">
-            <ul class="rounded-md bg-white shadow-xs">
-                <li class="p-4 border-b border-gray-300"><a href="#" class="flex justify-between"">Software Engineer
-                    Java
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                         class="w-4 h-4 mt-1">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                    </a></li>
-                <li class="p-4 border-b border-gray-300"><a href="#" class="flex justify-between"">Software Engineer C#
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                         class="w-4 h-4 mt-1">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        8
-                    </svg>
-                    </a></li>
-                <li class="p-4 border-b border-gray-300"><a href="#" class="flex justify-between">Software Developer
+        if(!empty($searches)) { ?>
+        <div class="recent-searches text-gray-700">
+            <h2 class="text-lg mb-2">Recent Searches:</h2>
+            <div class="rounded-md shadow-lg">
+                <ul class="rounded-md bg-white shadow-xs">
+                    <?php foreach ($searches as $search) {
+                        if (empty($search)) continue;
+                        ?>
+                    <li class="p-4 border-b border-gray-300"><a href="searchjobprocess.php?title=<?php echo $search ?>" class="flex justify-between"><?php echo $search ?>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                              class="w-4 h-4 mt-1">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            8
                         </svg>
-                    </a></li>
-            </ul>
-            <?php }; ?>
+                        </a>
+                    </li>
+                    <?php } ?>
+                </ul>
+
+                <?php }; ?>
         </div>
     </div>
 </div>

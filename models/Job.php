@@ -8,6 +8,12 @@
         private $description;
         private $fullTime;
         private $contract;
+        private $applicationByMail;
+        private $applicationByPost;
+        private $closingDate;
+        private $location;
+
+
 
         /**
          * @return mixed
@@ -24,11 +30,6 @@
         {
             $this->contract = $contract;
         }
-        private $applicationByMail;
-        private $applicationByPost;
-        private $closingDate;
-        private $location;
-
 
         /**
          * Get the value of posId
@@ -94,25 +95,6 @@
                 return $this;
         }
 
-        /**
-         * Get the value of applicationBy
-         */ 
-        public function getApplicationBy()
-        {
-             return $this->applicationBy;
-        }
-
-        /**
-         * Set the value of applicationBy
-         *
-         * @return  self
-         */ 
-        public function setApplicationBy($applicationBy)
-        {
-                $this->applicationBy = $applicationBy;
-
-                return $this;
-        }
 
         /**
          * Get the value of closingDate
@@ -157,7 +139,6 @@
         public function __toString()
         {
             return serialize($this);
-//            return "$this->posId,$this->jobTitle,$this->description,$this->closingDate,$this->location,$this->fullTime,$this->applicationBy";
         }
 
         /**
@@ -183,21 +164,57 @@
                     return strtolower($this->getJobTitle());
                 case "closingDate":
                     return $this->getClosingDate();
+                case "description":
+                    return $this->getDescription();
                 case "position":
                     return $this->getFullTime();
+                case "location":
+                    return $this->getLocation();
                 case "contract":
                     return $this->getContract();
-                case "mail":
-                    return $this->getApplicationByMail();
+                case "email":
+                    return $this->getApplicationByEMail();
                 case "post":
                     return $this->getApplicationByPost();
+            }
+        }
+
+        public function set($type, $value){
+            switch ($type){
+                case "posId":
+                    $this->setPosId($value);
+                    break;
+                case "title":
+                    $this->setJobTitle($value);
+                    break;
+                case "closingDate":
+                    $this->setClosingDate($value);
+                    break;
+                case "description":
+                    $this->setDescription($value);
+                    break;
+                case "position":
+                    $this->setFullTime($value);
+                    break;
+                case "location":
+                    $this->setLocation($value);
+                    break;
+                case "contract":
+                    $this->setContract($value);
+                    break;
+                case "email":
+                    $this->setApplicationByEMail($value);
+                    break;
+                case "post":
+                    $this->setApplicationByPost($value);
+                    break;
             }
         }
 
         /**
          * @return mixed
          */
-        public function getApplicationByMail()
+        public function getApplicationByEMail()
         {
             return $this->applicationByMail;
         }
@@ -205,7 +222,7 @@
         /**
          * @param mixed $applicationByMail
          */
-        public function setApplicationByMail($applicationByMail): void
+        public function setApplicationByEMail($applicationByMail): void
         {
             $this->applicationByMail = $applicationByMail;
         }

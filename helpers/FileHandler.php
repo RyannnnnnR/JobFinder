@@ -31,11 +31,11 @@
             return $tmp;
         }
 
-        public function writeFile($fileName, $job)
+        public function writeFile($fileName, $entry)
         {
             $fileName =  self::ROOT_DIR.$fileName;
             $handle = fopen($fileName, "a"); // open the file in read mode
-            if(fwrite($handle, $job) !== FALSE){    // write string to text file
+            if(fwrite($handle, $entry.PHP_EOL) !== FALSE){    // write string to text file
                 echo "Success";
             } else {
                echo "Fail";

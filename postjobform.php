@@ -12,7 +12,7 @@
     <?php include('partials/navbar.php') ?>
         <div class="container h-full">
             <div class="w-full flex items-center justify-center">
-            <form class="form w-2/3 mt-12" method="POST">
+            <form class="form w-2/3 mt-12" method="POST" action="postjobprocess.php">
                 <p class="text-2xl leading-5 font-bold text-gray-700">Job Information</p>
                 <p class="text-indigo-600 mt-2 mb-10">This information will be used to create a new job posting.</p>
                 <div class="flex flex-col">
@@ -28,7 +28,7 @@
                     <label for="posId" class="text-lg leading-5 font-medium text-gray-700">Job Title</label>
                     <div class="w-1/2 mt-1">
                         <div class="rounded-md shadow-sm w-full">
-                            <input type="text" name="posId" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="Software Engineer"/>
+                            <input type="text" name="title" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="Software Engineer"/>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <label for="description" class="text-lg leading-5 font-medium text-gray-700">Description</label>
                     <div class="w-3/4 mt-1">
                         <div class="rounded-md shadow-sm w-full">
-                            <textarea type="text" name="posId" id="" rows="5"class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2"></textarea>
+                            <textarea type="text" name="description" id="" rows="5"class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2"></textarea>
                         </div>
                         <p class="text-gray-600 mt-2">A brief description about the job.</p>
                     </div>
@@ -49,12 +49,16 @@
 
                     <div class="w-1/3 mt-1">
                         <div class="rounded-md shadow-sm relative w-full">
-                            <select name="cars" id="cars" class="mt-2 w-full py-2 appearance-none bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2">
-                                <option value="volvo">---</option>
-                                <option value="2">VIC</option>
-                                <option value="saab">NSW</option>
-                                <option value="mercedes">NT</option>
-                                <option value="audi">WA</option>
+                            <select name="location" id="cars" class="mt-2 w-full py-2 appearance-none bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2">
+                                <option value="">---</option>
+                                <option value="Victoria">VIC</option>
+                                <option value="New South Wales">NSW</option>
+                                <option value="Northern Territory">NT</option>
+                                <option value="Western Australia">WA</option>
+                                <option value="South Australia">SA</option>
+                                <option value="Tasmania">TAS</option>
+                                <option value="Australian Capital Territory">ACT</option>
+                                <option value="Queensland">QLD</option>
                             </select>
                             <span class="pointer-events-none absolute mt-2 mr-1 flex flex-col inset-y-0 right-0 items-center justify-center px-2 text-gray-500">
                                 <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="none" stroke="currentColor">
@@ -67,10 +71,10 @@
                 </div>
                 
                 <div class="flex flex-col mt-6">
-                <label for="description" class="text-lg leading-5 font-medium text-gray-700">Closing Date</label>
+                <label for="closingDate" class="text-lg leading-5 font-medium text-gray-700">Closing Date</label>
                     <div class="w-1/3 mt-1">
                         <div class="rounded-md shadow-sm w-full">
-                            <input type="date" name="posId" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" />
+                            <input type="text" name="closingDate" id="closingDate" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" value="<?php echo date('d/m/y') ?>" />
                         </div>
                     </div>
                 </div>
@@ -102,12 +106,12 @@
                 <div class="flex flex-col mt-6">
                     <label class="text-lg leading-5 font-medium text-gray-700">Application Delivery</label>
                         <div class="mt-1">
-                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" class="mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
-                            <label for="vehicle1" class="text-sm font-medium leading-5 text-gray-700">Post</label>
+                            <input type="checkbox" id="post" name="post" value="1" class="mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
+                            <label for="post" class="text-sm font-medium leading-5 text-gray-700">Post</label>
                         </div>
                         <div class="mt-2">
-                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" class=" mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
-                            <label for="vehicle2" class="text-sm font-medium leading-5 text-gray-700">Mail</label>
+                            <input type="checkbox" id="email" name="email" value="1" class=" mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
+                            <label for="email" class="text-sm font-medium leading-5 text-gray-700">E-Mail</label>
                         </div>
                 </div>
 
