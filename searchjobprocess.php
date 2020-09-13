@@ -23,8 +23,8 @@
                     <?php
                         // Log search
                         JobsHandler::getInstance()->logRecentSearch($_GET['title']);
-                        $jobs = JobsHandler::getInstance()->filterJobs($_GET);
-                        $jobs = JobsHandler::getInstance()->sortByDate($jobs);
+                        $filtered = JobsHandler::getInstance()->filterJobs($_GET);
+                        $jobs = JobsHandler::getInstance()->sortByDate($filtered);
                         echo "<h3 class='text-lg leading-5 font-medium text-gray-600 mb-6 mt-1 pl-2'>Found ",count($jobs)," jobs...</h3>";
                     ?>
                     <? if(!empty($jobs)) { ?>
