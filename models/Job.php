@@ -26,7 +26,7 @@
         /**
          * @param mixed $contract
          */
-        public function setContract($contract): void
+        public function setContract($contract)
         {
             $this->contract = $contract;
         }
@@ -224,7 +224,7 @@
         /**
          * @param mixed $applicationByMail
          */
-        public function setApplicationByEMail($applicationByMail): void
+        public function setApplicationByEMail($applicationByMail)
         {
             $this->applicationByMail = $applicationByMail;
         }
@@ -240,12 +240,12 @@
         /**
          * @param mixed $applicationByPost
          */
-        public function setApplicationByPost($applicationByPost): void
+        public function setApplicationByPost($applicationByPost)
         {
             $this->applicationByPost = $applicationByPost;
         }
 
-        public static function fromString($entry): Job
+        public static function fromString($entry)
         {
            return unserialize($entry);
         }

@@ -30,7 +30,7 @@
         ?>
     <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4">
         <p class="font-bold">Successfully created post!</p>
-        <p>Click <a href="jobdetails.php?posId=<?php echo $_POST['posId']?>" class="underline">here</a> to see the job details page.</p>
+        <p>Click <a href="jobdetails.php?posId=<?php echo $_POST['posId']?>" class="underline">here</a> to see the job details page <b>OR</b> click <a href="index.php" class="underline">here</a> to go back to the homepage.</p>
     </div>
 <? } ?>
 </body>

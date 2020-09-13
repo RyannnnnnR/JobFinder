@@ -69,11 +69,16 @@
                                         <div class="flex flex-col ml-4 w-3/4 pb-2">
                                             <h1 class="text-lg leading-6 text-gray-600 font-bold">Features</h1>
                                             <div class="text-sm mt-1">
-                                                <ul>
-                                                    <li>PHP: 7.1.3</li>
-                                                    <li>TailwindCSS: 1.7.6</li>
-                                                    <li>React JS: 1.6.3</li>
+                                                <ul class="list-disc ml-4">
+                                                    <li>Fully featured job posting application</li>
+                                                    <li>Advanced search and filter algorithm</li>
+                                                    <li>Track recent searches</li>
+                                                    <li>View Job information in detail</li>
+                                                    <li>Custom CSS styling</li>
                                                 </ul>
+                                                <p class="mt-2">
+                                                    <a class="break-words text-indigo-700" href="https://swinburne.instructure.com/courses/29943/discussion_topics/430655" class="">https://swinburne.instructure.com/courses/29943/discussion_topics/430655</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -88,12 +93,14 @@
                                         <div class="flex flex-col ml-4 w-3/4 pb-2">
                                             <h1 class="text-lg leading-6 text-gray-600 font-bold">Missing Features</h1>
                                             <div class="text-sm mt-1">
-                                                <p>I believe I am missing no required features for this assignment.</p>
+                                                <ul class="list-disc ml-4">
+                                                    <li>The jobs.txt file doesn't store job information as a tab separated object. Instead it is stored as a serializable object which can we easily deserialized -- It also mmakes the storage format more scalable.</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="rounded-md shadow-lg mt-6">
+                                <div class="rounded-md shadow-lg mt-6 mb-8">
                                     <div class="flex rounded-md bg-white shadow-xs p-4">
                                         <div class="bg-indigo-500 rounded-md w-12 h-12 flex justify-center items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-white">
@@ -103,7 +110,7 @@
                                         <div class="flex flex-col ml-4 w-3/4 pb-4">
                                             <h1 class="text-lg leading-6 text-gray-600 font-bold">Bugs</h1>
                                             <div class="text-sm mt-1">
-                                                <p>No bugs to report as of <b>06/09/2020</b>.</p>
+                                                <p>No bugs to report as of <b>13/09/2020</b>.</p>
                                             </div>
                                         </div>
                                     </div>

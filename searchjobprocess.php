@@ -24,12 +24,20 @@
                         // Log search
                         JobsHandler::getInstance()->logRecentSearch($_GET['title']);
                         $jobs = JobsHandler::getInstance()->filterJobs($_GET);
-                        echo "<h3 class='text-lg leading-5 font-medium text-gray-600 mb-12 mt-1 pl-2'>Found ",count($jobs)," jobs...</h3>";
+                        $jobs = JobsHandler::getInstance()->sortByDate($jobs);
+                        echo "<h3 class='text-lg leading-5 font-medium text-gray-600 mb-6 mt-1 pl-2'>Found ",count($jobs)," jobs...</h3>";
                     ?>
+                    <? if(!empty($jobs)) { ?>
+                        <a href="advancedsearchform.php" class="text-xs text-indigo-600 hover:underline block -mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-3 h-3 inline-block" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                            <span>Return to Advanced Search</span>
+                        </a>
                     <?php foreach ($jobs as $job) { ?>
                         <a href="jobdetails.php?posId=<?php echo $job->getPosId(); ?>">
                         <div class="rounded-lg shadow-sm">
-                            <div class="flex justify-between items-center rounded-lg px-6 py-4 shadow-xs bg-white mt-6">
+                            <div class="flex justify-between items-center rounded-lg px-6 py-4 shadow-xs bg-white my-6">
                                 <div class="space-y-6">
                                     <div class="space-y-1">
                                         <h3 class="text-lg leading-7 font-semibold text-indigo-600"><?php echo $job->getJobTitle()?></h3>
@@ -64,6 +72,13 @@
                         </div>
                     </a>
                     <?php }?>
+                    <?php }  else {?>
+                        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
+                            <p class="font-bold">Something went wrong!</p>
+                            <p class="py-1">Sorry! We could not find any jobs matching that criteria.</p>
+                            <p>Click <a href="advancedsearchform.php" class="underline">here</a> to go back to the advanced search form <b>OR</b> click <a href="index.php" class="underline">here</a> to go back to the homepage.</p>
+                        </div>
+                    <? } ?>
                 </div>
             </div>
 </body>

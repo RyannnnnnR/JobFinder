@@ -20,18 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b11082c-3c2e-4fb4-bd81-12c933c393e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/jobposts/recent_searches.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advancedsearchform.php" beforeDir="false" afterPath="$PROJECT_DIR$/advancedsearchform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/assign1/jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/assign1/jobs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/assign1/recent_searches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/assign1/recent_searches.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assign1/jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/jobposts/jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assign1/recent_searches.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/FileHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/FileHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/JobsHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/JobsHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobdetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/jobdetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postjobform.php" beforeDir="false" afterPath="$PROJECT_DIR$/postjobform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/postjobprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/postjobprocess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchjobform.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchjobform.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchjobprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchjobprocess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/logo2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/style/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,11 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/jobposts" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Launch Dev" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
       <method v="2" />
@@ -72,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599883984373</updated>
-      <workItem from="1599883986248" duration="29034000" />
+      <workItem from="1599883986248" duration="34723000" />
     </task>
     <servers />
   </component>
@@ -132,10 +140,10 @@
       <screen x="0" y="23" width="1440" height="787" />
     </state>
     <state x="221" y="55" key="SettingsEditor/0.23.1440.787@0.23.1440.787" timestamp="1599891291942" />
-    <state x="418" y="49" width="604" height="735" key="find.popup" timestamp="1599988326538">
+    <state x="418" y="49" width="604" height="735" key="find.popup" timestamp="1599998854348">
       <screen x="0" y="23" width="1440" height="796" />
     </state>
-    <state x="418" y="49" width="604" height="735" key="find.popup/0.23.1440.796@0.23.1440.796" timestamp="1599988326538" />
+    <state x="418" y="49" width="604" height="735" key="find.popup/0.23.1440.796@0.23.1440.796" timestamp="1599998854348" />
     <state x="385" y="134" width="670" height="676" key="search.everywhere.popup" timestamp="1599887959427">
       <screen x="0" y="23" width="1440" height="787" />
     </state>

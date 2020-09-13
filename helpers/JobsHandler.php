@@ -21,17 +21,8 @@
                 if(empty($entry)) continue;
                 $this->jobs[] = Job::fromString($entry);
             }
-            return  $this->jobs;
+            return  array_filter($this->jobs);
         }
-//        /**
-//         * title=hello
-//         * location=vic
-//         * closingDate=2020-09-12&
-//         * position=0
-//         * &contract=1
-//         * delivery[]=mail
-//         * delivery[]=post
-//         */
         /**
          * @param $parameters
          */
@@ -41,12 +32,14 @@
             $keys = array_keys ($parameters);
             $filtered = [];
             $jobs = $this->getAllJobs();
-
+            if(count(array_filter($parameters)) == 0) {
+                return $jobs;
+            }
             foreach ($jobs as $job) {
                 $match = true;
                 foreach ($keys as $key) {
                     if(empty($parameters[$key])) continue;
-                    if($job->get($key) !=  $parameters[$key]) {
+                    if(strpos($job->get($key),$parameters[$key]) === false ) {
                         $match = false;
                         break;
                     }
@@ -55,15 +48,21 @@
                 if(!$match) continue;
                 $filtered[] = $job;
             }
-            return $filtered;
+            return array_filter($filtered);
+        }
+
+        public function sortByDate($arr)
+        {
+            usort($arr, function ($a, $b) {
+                return strtotime($b->getClosingDate()) - strtotime($a->getClosingDate());
+            });
+            return $arr;
         }
 
         public function validateJobListing($values)
         {
             $errors = [];
             $keys = array_keys ($values);
-            echo count($keys);
-            print_r($values);
             // Check all are set
             if(count($keys) != 8 && count($keys) != 9) {
                 $errors[] = "invalid_data";
@@ -71,8 +70,6 @@
             // Check all are empty
             foreach ($keys as $key){
                 if (empty($values[$key])) {
-                    echo $key;
-                    echo $values[$key];
                     $errors[] = "invalid_data";
                     break;
                 }
@@ -88,24 +85,23 @@
                     $errors[] = "posid_not_unique";
                 }
             }
-           return $errors;
+           return array_filter($errors);
 
         }
 
-    public function buildAndSaveObjectFromForm($values){
+    public function buildAndSaveObjectFromForm($values) {
         $job = new Job();
         $keys = array_keys ($values);
         foreach ($keys as $key) {
             $job->set($key, $values[$key]);
         }
-//        echo $job;
         FileHandler::getInstance()->writeFile("jobs.txt", $job);
     }
 
         /**
          * @return Job|null
          */
-        public function getJobByPositionId($positionId): ?Job
+        public function getJobByPositionId($positionId)
         {
             $jobs = $this->getAllJobs();
             foreach ($jobs as $job) {
@@ -120,7 +116,7 @@
             if (in_array(strtolower($searchTerm), FileHandler::getInstance()->readFile('recent_searches.txt'))) return;
             FileHandler::getInstance()->writeFile("recent_searches.txt", $searchTerm.PHP_EOL);
         }
-        public function getRecentJobSearches(): array {
+        public function getRecentJobSearches() {
             return array_filter(array_slice(FileHandler::getInstance()->readFile('recent_searches.txt'),0,4));
         }
     }

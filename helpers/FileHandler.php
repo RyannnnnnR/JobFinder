@@ -1,16 +1,14 @@
 <?php
     class FileHandler {
-        const ROOT_DIR = "./data/assign1/";
+        const ROOT_DIR = "./data/jobposts/";
         private static $instance = null;
 
         function __construct()
         {
             // Initialise directories
-            $dir = "../../data/assign1";
             if(!is_dir(self::ROOT_DIR))  {
                 umask(0007);
-                echo self::ROOT_DIR;
-                mkdir(self::ROOT_DIR, 02770, true);
+                mkdir(self::ROOT_DIR, 02770);
             }
         }
         public static function getInstance()
