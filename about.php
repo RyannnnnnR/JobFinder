@@ -48,8 +48,8 @@
                                         <div class="flex flex-col ml-4 w-3/4 pb-4">
                                             <h1 class="text-lg leading-6 text-gray-600 font-bold">Discussion</h1>
                                             <div class="text-sm mt-2">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo in inventore veniam consectetur corrupti voluptatem ratione iure non nulla, nostrum eum ipsam aut sed illo assumenda modi libero a odit.</p>
-                                                <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo in inventore veniam consectetur corrupti voluptatem ratione iure non nulla, nostrum eum ipsam aut sed illo assumenda modi libero a odit.</p>
+                                                <p>I was only involved in one discussion; The discussion was centered around CSS styling and the appropriate time to apply styling: as you go or all at the end.</p>
+                                                <p class="mt-2">My preference is as I go. I don't think it makes sense to do it after. I think it's very handy to see how the design is panning out. Also as you go and can reuse styling elements, it becomes must easier.</p>
                                                 <p class="mt-2">
                                                     <a class="break-words text-indigo-700" href="https://swinburne.instructure.com/courses/29943/discussion_topics/430655">https://swinburne.instructure.com/courses/29943/discussion_topics/430655</a>
                                                 </p>

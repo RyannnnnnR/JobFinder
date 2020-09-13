@@ -23,18 +23,20 @@
                     <?php
                         // Log search
                         JobsHandler::getInstance()->logRecentSearch($_GET['title']);
+                        // Filter results
                         $filtered = JobsHandler::getInstance()->filterJobs($_GET);
+                        // Sort them
                         $jobs = JobsHandler::getInstance()->sortByDate($filtered);
                         echo "<h3 class='text-lg leading-5 font-medium text-gray-600 mb-6 mt-1 pl-2'>Found ",count($jobs)," jobs...</h3>";
                     ?>
 
-                    <?php if(empty($jobs)) { ?>
+                    <?php if(empty($jobs)) { // Check if jobs is empty, print error if so?>
                         <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
                             <p class="font-bold">Something went wrong!</p>
                             <p class="py-1">Sorry! We could not find any jobs matching that criteria.</p>
                             <p>Click <a href="advancedsearchform.php" class="underline">here</a> to go back to the advanced search form <b>OR</b> click <a href="index.php" class="underline">here</a> to go back to the homepage.</p>
                         </div>
-                    <?php } else { ?>
+                    <?php } else { // else show all jobs, we found.?>
                         <a href="advancedsearchform.php" class="text-xs text-indigo-600 hover:underline block -mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-3 h-3 inline-block" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -57,12 +59,12 @@
                                                 <svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-gray-400">
                                                     <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                                                     <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15a24.98 24.98 0 01-8-1.308z"></path>
-                                                </svg><span class="text-gray-600"><? echo $job->getFullTime() ==  1 ? "Full Time": "Part Time"?></span></div>
+                                                </svg><span class="text-gray-600"><?php echo $job->getFullTime() ==  1 ? "Full Time": "Part Time"?></span></div>
                                         </div>
                                         <div>
                                             <div class="flex items-start space-x-2 text-sm leading-5"><svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-gray-400">
                                                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                                                </svg><span class="text-gray-600"><? echo $job->getLocation()?></span></div>
+                                                </svg><span class="text-gray-600"><?php echo $job->getLocation()?></span></div>
                                         </div>
                                         <div>
                                             <div class="flex items-start space-x-2 text-sm leading-5"><svg viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-gray-400">

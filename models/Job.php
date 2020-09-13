@@ -1,8 +1,5 @@
 <?php
     class Job {
-        /**
-         * @var string
-         */
         private $posId;
         private $jobTitle;
         private $description;
@@ -16,6 +13,7 @@
 
 
         /**
+         * Get Contract type
          * @return mixed
          */
         public function getContract()
@@ -24,6 +22,7 @@
         }
 
         /**
+         * Set Contract type
          * @param mixed $contract
          */
         public function setContract($contract)
@@ -136,12 +135,17 @@
                 return $this;
         }
 
+        /**
+         * Override string properties of this object.
+         * @return serialized value of this object
+         */
         public function __toString()
         {
             return serialize($this).PHP_EOL;
         }
 
         /**
+         * Get Job Title
          * @return mixed
          */
         public function getJobTitle()
@@ -150,6 +154,7 @@
         }
 
         /**
+         * Set Job Title
          * @param mixed $jobTitle
          */
         public function setJobTitle($jobTitle)
@@ -158,6 +163,11 @@
             return $this;
         }
 
+        /**
+         * Try to get corresponding value of parameter
+         * @param $type
+         * @return mixed|string
+         */
         public function get($type){
             switch ($type){
                 case "posId":
@@ -181,6 +191,11 @@
             }
         }
 
+        /**
+         * * Try to set corresponding value of parameter
+         * @param $type
+         * @param $value
+         */
         public function set($type, $value){
             switch ($type){
                 case "posId":
@@ -214,6 +229,7 @@
         }
 
         /**
+         * Get Is application by email
          * @return mixed
          */
         public function getApplicationByEMail()
@@ -222,14 +238,7 @@
         }
 
         /**
-         * @param mixed $applicationByMail
-         */
-        public function setApplicationByEMail($applicationByMail)
-        {
-            $this->applicationByMail = $applicationByMail;
-        }
-
-        /**
+         * Get Is application by post
          * @return mixed
          */
         public function getApplicationByPost()
@@ -238,6 +247,7 @@
         }
 
         /**
+         * Set Is application by email
          * @param mixed $applicationByPost
          */
         public function setApplicationByPost($applicationByPost)
@@ -245,6 +255,11 @@
             $this->applicationByPost = $applicationByPost;
         }
 
+        /**
+         * Deserialize Job object from string
+         * @param $entry
+         * @return mixed
+         */
         public static function fromString($entry)
         {
            return unserialize($entry);

@@ -26,12 +26,14 @@
     <?php
         include("helpers/JobsHandler.php");
         $searches = JobsHandler::getInstance()->getRecentJobSearches();
+        // Check if there are searches.
         if(!empty($searches)) { ?>
         <div class="recent-searches text-gray-700">
             <h2 class="text-lg mb-2">Recent Searches:</h2>
             <div class="rounded-md shadow-lg">
                 <ul class="rounded-md bg-white shadow-xs">
                     <?php foreach ($searches as $search) {
+                        // Skip  search query if its a new line or blank
                         if (empty($search)) continue;
                         ?>
                     <li class="p-4 border-b border-gray-300"><a href="searchjobprocess.php?title=<?php echo $search ?>" class="flex justify-between"><?php echo $search ?>
