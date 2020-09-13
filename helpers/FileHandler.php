@@ -35,11 +35,12 @@
         {
             $fileName =  self::ROOT_DIR.$fileName;
             $handle = fopen($fileName, "a"); // open the file in read mode
-            if(fwrite($handle, $entry.PHP_EOL) !== FALSE){    // write string to text file
-                echo "Success";
+            if(fwrite($handle, $entry) !== FALSE) {    // write string to text file
+                $result = true;
             } else {
-               echo "Fail";
+                $result = false;
             }
-            fclose($handle);   // close the text file  
+            fclose($handle);   // close the text file
+            return $result;
         }
     }

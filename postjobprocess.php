@@ -12,7 +12,6 @@
 <?php
     include ('helpers/JobsHandler.php');
     $errors = JobsHandler::getInstance()->validateJobListing($_POST);
-    var_dump($errors);
 
 
 ?>

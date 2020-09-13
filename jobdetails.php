@@ -24,7 +24,6 @@
                         <?php
                             $job = JobsHandler::getInstance()->getJobByPositionId($_GET['posId']);
                             if ($job == null) {
-                                echo "Cannot find job";
                                 return;
                             }
                         ?>
@@ -53,7 +52,7 @@
                                 <td class="py-4 px-10 text-gray-700">
                                     <ul class="list-disc text-indigo-400">
                                         <li>
-                                            <span class="text-black"><?php echo $job->getFullTime() ? "Full Time" : "Part Time" ?></span>
+                                            <span class="text-black"><?php echo $job->getFullTime()  == 1? "Full Time" : "Part Time" ?></span>
                                         </li>
                                     </ul>
                                 </td>
@@ -63,7 +62,7 @@
                                 <td class="py-4 px-10 text-gray-700">
                                     <ul class="list-disc text-indigo-400">
                                         <li>
-                                            <span class="text-black"><?php echo $job->getContract() ? "On-Going" : "Fixed Term" ?></span>
+                                            <span class="text-black"><?php echo $job->getContract() == 1? "On-Going" : "Fixed Term" ?></span>
                                         </li>
                                     </ul>
                                 </td>

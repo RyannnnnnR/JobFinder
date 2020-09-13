@@ -33,10 +33,14 @@
                         <div class="rounded-md shadow-sm relative">
                             <select name="location" class="mt-2 w-full py-2 appearance-none bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2">
                                 <option value="">---</option>
-                                <option value="vic">VIC</option>
-                                <option value="nsw">NSW</option>
-                                <option value="nt">NT</option>
-                                <option value="wa">WA</option>
+                                <option value="Victoria">VIC</option>
+                                <option value="New South Wales">NSW</option>
+                                <option value="Northern Territory">NT</option>
+                                <option value="Western Australia">WA</option>
+                                <option value="South Australia">SA</option>
+                                <option value="Tasmania">TAS</option>
+                                <option value="Australian Capital Territory">ACT</option>
+                                <option value="Queensland">QLD</option>
                             </select>
                             <div class="pointer-events-none absolute mt-2 mr-1 flex flex-col inset-y-0 right-0 items-center justify-center px-2 text-gray-500">
                                 <svg class="fill-current h-4 w-4 transform rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -47,9 +51,9 @@
                                 </div>
                     <div class="w-1/2">
                     <label for="description" class="text-lg leading-5 font-medium text-gray-700">Closing Date</label>
-                    <div class="w-full mt-1">
+                    <div class="w-full mt-2">
                         <div class="rounded-md shadow-sm">
-                            <input type="date" name="closingDate" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" />
+                            <input type="text" name="closingDate" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="dd/mm/yy"/>
                         </div>
                     </div>
                     </div>
@@ -61,22 +65,22 @@
                     <div class="w-1/3">
                         <p class="text-lg leading-5 font-medium text-gray-700">Position</p>
                         <div class="mt-1">
-                            <input type="radio" id="male" name="position" value="0" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <input type="radio" id="male" name="position" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
                             <label for="male" class="text-sm font-medium leading-5 text-gray-700">Full Time</label>
                         </div>
                         <div class="mt-2">
-                            <input type="radio" id="female" name="position" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <input type="radio" id="female" name="position" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
                             <label for="female" class="text-sm font-medium leading-5 text-gray-700">Part Time</label>
                         </div>
                     </div>
                     <div class="w-1/3">
                         <p class="text-lg leading-5 font-medium text-gray-700">Contract</p>
                         <div class="mt-1">
-                            <input type="radio" id="male" name="contract" value="0" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <input type="radio" id="male" name="contract" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
                             <label for="male" class="text-sm font-medium leading-5 text-gray-700">On-going</label>
                         </div>
                         <div class="mt-2">
-                            <input type="radio" id="female" name="contract" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <input type="radio" id="female" name="contract" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
                             <label for="female" class="text-sm font-medium leading-5 text-gray-700">Fixed term</label>
                         </div>
                     </div>

@@ -41,14 +41,19 @@
             $keys = array_keys ($parameters);
             $filtered = [];
             $jobs = $this->getAllJobs();
+
             foreach ($jobs as $job) {
+                $match = true;
                 foreach ($keys as $key) {
-                    if($job->get($key) !=  $parameters[$key]){
-                       continue;
+                    if(empty($parameters[$key])) continue;
+                    if($job->get($key) !=  $parameters[$key]) {
+                        $match = false;
+                        break;
                     }
                 }
+                if(in_array($job, $filtered)) continue;
+                if(!$match) continue;
                 $filtered[] = $job;
-
             }
             return $filtered;
         }
@@ -58,6 +63,7 @@
             $errors = [];
             $keys = array_keys ($values);
             echo count($keys);
+            print_r($values);
             // Check all are set
             if(count($keys) != 8 && count($keys) != 9) {
                 $errors[] = "invalid_data";
@@ -65,7 +71,10 @@
             // Check all are empty
             foreach ($keys as $key){
                 if (empty($values[$key])) {
+                    echo $key;
+                    echo $values[$key];
                     $errors[] = "invalid_data";
+                    break;
                 }
             }
             // Check date format
@@ -108,10 +117,10 @@
         }
         public function logRecentSearch($searchTerm) {
             if (empty($searchTerm)) return;
-            if (in_array($searchTerm, FileHandler::getInstance()->readFile('recent_searches.txt'))) return;
+            if (in_array(strtolower($searchTerm), FileHandler::getInstance()->readFile('recent_searches.txt'))) return;
             FileHandler::getInstance()->writeFile("recent_searches.txt", $searchTerm.PHP_EOL);
         }
         public function getRecentJobSearches(): array {
-            return array_slice(FileHandler::getInstance()->readFile('recent_searches.txt'),0,3);
+            return array_filter(array_slice(FileHandler::getInstance()->readFile('recent_searches.txt'),0,4));
         }
     }

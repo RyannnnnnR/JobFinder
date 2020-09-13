@@ -138,7 +138,7 @@
 
         public function __toString()
         {
-            return serialize($this);
+            return serialize($this).PHP_EOL;
         }
 
         /**
@@ -160,6 +160,8 @@
 
         public function get($type){
             switch ($type){
+                case "posId":
+                    return strtolower($this->getPosId());
                 case "title":
                     return strtolower($this->getJobTitle());
                 case "closingDate":
@@ -169,7 +171,7 @@
                 case "position":
                     return $this->getFullTime();
                 case "location":
-                    return $this->getLocation();
+                    return strtolower($this->getLocation());
                 case "contract":
                     return $this->getContract();
                 case "email":

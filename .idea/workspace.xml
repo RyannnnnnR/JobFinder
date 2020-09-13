@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5b11082c-3c2e-4fb4-bd81-12c933c393e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advancedsearchform.php" beforeDir="false" afterPath="$PROJECT_DIR$/advancedsearchform.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/assign1/jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/assign1/jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/assign1/recent_searches.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/assign1/recent_searches.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/FileHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/FileHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/JobsHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/JobsHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobdetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/jobdetails.php" afterDir="false" />
@@ -70,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599883984373</updated>
-      <workItem from="1599883986248" duration="24442000" />
+      <workItem from="1599883986248" duration="29034000" />
     </task>
     <servers />
   </component>
@@ -130,6 +132,10 @@
       <screen x="0" y="23" width="1440" height="787" />
     </state>
     <state x="221" y="55" key="SettingsEditor/0.23.1440.787@0.23.1440.787" timestamp="1599891291942" />
+    <state x="418" y="49" width="604" height="735" key="find.popup" timestamp="1599988326538">
+      <screen x="0" y="23" width="1440" height="796" />
+    </state>
+    <state x="418" y="49" width="604" height="735" key="find.popup/0.23.1440.796@0.23.1440.796" timestamp="1599988326538" />
     <state x="385" y="134" width="670" height="676" key="search.everywhere.popup" timestamp="1599887959427">
       <screen x="0" y="23" width="1440" height="787" />
     </state>

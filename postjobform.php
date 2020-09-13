@@ -86,7 +86,7 @@
                         <label for="male" class="text-sm font-medium leading-5 text-gray-700">Full Time</label>
                     </div>
                     <div class="mt-2">
-                        <input type="radio" id="female" name="position" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                        <input type="radio" id="female" name="position" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
                         <label for="female" class="text-sm font-medium leading-5 text-gray-700">Part Time</label>
                     </div>
                 </div>
