@@ -20,6 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b11082c-3c2e-4fb4-bd81-12c933c393e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advancedsearchform.php" beforeDir="false" afterPath="$PROJECT_DIR$/advancedsearchform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/FileHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/FileHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobdetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/jobdetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Job.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postjobform.php" beforeDir="false" afterPath="$PROJECT_DIR$/postjobform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postjobprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/postjobprocess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchjobform.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchjobform.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchjobprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchjobprocess.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599883984373</updated>
-      <workItem from="1599883986248" duration="34848000" />
+      <workItem from="1599883986248" duration="37352000" />
     </task>
     <servers />
   </component>

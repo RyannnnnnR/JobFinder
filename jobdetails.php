@@ -75,12 +75,12 @@
                                             <li>
                                                 <span class="text-black">Email</span>
                                             </li>
-                                        <? } ?>
+                                        <?php } ?>
                                         <?php if ($job->getApplicationByPost()) { ?>
                                             <li>
                                                 <span class="text-black">Post</span>
                                             </li>
-                                        <? } ?>
+                                        <?php } ?>
                                     </ul>
                                 </td>
                             </tr>

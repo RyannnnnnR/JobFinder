@@ -48,7 +48,7 @@
          *
          * @return  self
          */ 
-        public function setPosId(string $posId)
+        public function setPosId($posId)
         {
                 $this->posId = $posId;
 

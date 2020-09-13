@@ -1,6 +1,6 @@
 <?php
     class FileHandler {
-        const ROOT_DIR = "./data/jobposts/";
+        const ROOT_DIR = "../../data/jobposts/";
         private static $instance = null;
 
         function __construct()

@@ -21,8 +21,8 @@
                     </a>
                 </div>
             </div>
+        </form>
     </div>
-    </form>
     <?php
         include("helpers/JobsHandler.php");
         $searches = JobsHandler::getInstance()->getRecentJobSearches();

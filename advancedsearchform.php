@@ -17,10 +17,10 @@
                 <p class="text-indigo-600 mt-2 mb-10">Find a jobs based on the application type, location, position, etc.</p>
 
                 <div class="flex flex-col mt-6">
-                    <label for="posId" class="text-lg leading-5 font-medium text-gray-700">Job Title</label>
+                    <label for="title" class="text-lg leading-5 font-medium text-gray-700">Job Title</label>
                     <div class="w-full mt-1">
                         <div class="rounded-md shadow-sm">
-                            <input type="text" name="title" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="Software Engineer"/>
+                            <input type="text" name="title" id="title" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="Software Engineer"/>
                         </div>
                     </div>
                 </div>
@@ -50,10 +50,10 @@
                     </div>
                                 </div>
                     <div class="w-1/2">
-                    <label for="description" class="text-lg leading-5 font-medium text-gray-700">Closing Date</label>
+                    <label for="closingDate" class="text-lg leading-5 font-medium text-gray-700">Closing Date</label>
                     <div class="w-full mt-2">
                         <div class="rounded-md shadow-sm">
-                            <input type="text" name="closingDate" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="dd/mm/yy"/>
+                            <input type="text" name="closingDate" id="closingDate" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="dd/mm/yy"/>
                         </div>
                     </div>
                     </div>
@@ -65,34 +65,34 @@
                     <div class="w-1/3">
                         <p class="text-lg leading-5 font-medium text-gray-700">Position</p>
                         <div class="mt-1">
-                            <input type="radio" id="male" name="position" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
-                            <label for="male" class="text-sm font-medium leading-5 text-gray-700">Full Time</label>
+                            <input type="radio" id="full_time" name="position" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <label for="full_time" class="text-sm font-medium leading-5 text-gray-700">Full Time</label>
                         </div>
                         <div class="mt-2">
-                            <input type="radio" id="female" name="position" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
-                            <label for="female" class="text-sm font-medium leading-5 text-gray-700">Part Time</label>
+                            <input type="radio" id="part_time" name="position" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <label for="part_time" class="text-sm font-medium leading-5 text-gray-700">Part Time</label>
                         </div>
                     </div>
                     <div class="w-1/3">
                         <p class="text-lg leading-5 font-medium text-gray-700">Contract</p>
                         <div class="mt-1">
-                            <input type="radio" id="male" name="contract" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
-                            <label for="male" class="text-sm font-medium leading-5 text-gray-700">On-going</label>
+                            <input type="radio" id="on-going" name="contract" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <label for="on-going" class="text-sm font-medium leading-5 text-gray-700">On-going</label>
                         </div>
                         <div class="mt-2">
-                            <input type="radio" id="female" name="contract" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
-                            <label for="female" class="text-sm font-medium leading-5 text-gray-700">Fixed term</label>
+                            <input type="radio" id="fixed-term" name="contract" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                            <label for="fixed-term" class="text-sm font-medium leading-5 text-gray-700">Fixed term</label>
                         </div>
                     </div>
                     <div class="w-1/3">
-                        <label class="text-lg leading-5 font-medium text-gray-700">Application Delivery</label>
+                        <p class="text-lg leading-5 font-medium text-gray-700">Application Delivery</p>
                             <div class="mt-1">
-                                <input type="checkbox" id="vehicle1" name="mail" value="1" class="mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
-                                <label for="delivery1" class="text-sm font-medium leading-5 text-gray-700">Post</label>
+                                <input type="checkbox" id="post" name="mail" value="1" class="mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
+                                <label for="post" class="text-sm font-medium leading-5 text-gray-700">Post</label>
                             </div>
                             <div class="mt-2">
-                                <input type="checkbox" id="vehicle2" name="post" value="1" class=" mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
-                                <label for="delivery2" class="text-sm font-medium leading-5 text-gray-700">Mail</label>
+                                <input type="checkbox" id="email" name="post" value="1" class=" mr-2 checkbox-input appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-md flex-shrink-0 align-middle">
+                                <label for="email" class="text-sm font-medium leading-5 text-gray-700">Mail</label>
                             </div>
                     </div>
                 </div>

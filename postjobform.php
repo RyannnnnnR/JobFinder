@@ -19,7 +19,7 @@
                     <label for="posId" class="text-lg leading-5 font-medium text-gray-700">Position ID</label>
                     <div class="mt-1 w-1/5">
                         <div class="rounded-md shadow-sm w-full">
-                            <input type="text" name="posId" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="P0001"/>
+                            <input type="text" name="posId" id="posId" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="P0001"/>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     <label for="posId" class="text-lg leading-5 font-medium text-gray-700">Job Title</label>
                     <div class="w-1/2 mt-1">
                         <div class="rounded-md shadow-sm w-full">
-                            <input type="text" name="title" id="" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="Software Engineer"/>
+                            <input type="text" name="title" id="title" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2" placeholder="Software Engineer"/>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <label for="description" class="text-lg leading-5 font-medium text-gray-700">Description</label>
                     <div class="w-3/4 mt-1">
                         <div class="rounded-md shadow-sm w-full">
-                            <textarea type="text" name="description" id="" rows="5"class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2"></textarea>
+                            <textarea name="description" id="description" rows="5" class="w-full py-2 bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2"></textarea>
                         </div>
                         <p class="text-gray-600 mt-2">A brief description about the job.</p>
                     </div>
@@ -49,7 +49,7 @@
 
                     <div class="w-1/3 mt-1">
                         <div class="rounded-md shadow-sm relative w-full">
-                            <select name="location" id="cars" class="mt-2 w-full py-2 appearance-none bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2">
+                            <select name="location" id="location" class="mt-2 w-full py-2 appearance-none bg-white border rounded-md border-gray-400 sm:text-sm sm:leading-5 focus:outline-none pl-2">
                                 <option value="">---</option>
                                 <option value="Victoria">VIC</option>
                                 <option value="New South Wales">NSW</option>
@@ -82,11 +82,11 @@
                 <div class="flex flex-col mt-6">
                     <p class="text-lg leading-5 font-medium text-gray-700">Position</p>
                     <div class="mt-1">
-                        <input type="radio" id="male" name="position" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                        <input type="radio" id="full_time" name="position" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
                         <label for="male" class="text-sm font-medium leading-5 text-gray-700">Full Time</label>
                     </div>
                     <div class="mt-2">
-                        <input type="radio" id="female" name="position" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                        <input type="radio" id="part_time" name="position" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
                         <label for="female" class="text-sm font-medium leading-5 text-gray-700">Part Time</label>
                     </div>
                 </div>
@@ -94,12 +94,12 @@
                 <div class="flex flex-col mt-6">
                     <p class="text-lg leading-5 font-medium text-gray-700">Contract</p>
                     <div class="mt-1">
-                        <input type="radio" id="male" name="contract" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
-                        <label for="male" class="text-sm font-medium leading-5 text-gray-700">On-going</label>
+                        <input type="radio" id="on-going" name="contract" value="1" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                        <label for="on-going" class="text-sm font-medium leading-5 text-gray-700">On-going</label>
                     </div>
                     <div class="mt-2">
-                        <input type="radio" id="female" name="contract" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
-                        <label for="female" class="text-sm font-medium leading-5 text-gray-700">Fixed term</label>
+                        <input type="radio" id="fixed-term" name="contract" value="2" class="mr-2 radio-button appearance-none inline-block select-none text-indigo-700 w-5 h-5 border border-gray-300 bg-white border-box rounded-full flex-shrink-0 align-middle">
+                        <label for="fixed-term" class="text-sm font-medium leading-5 text-gray-700">Fixed term</label>
                     </div>
                 </div>
 
