@@ -28,10 +28,11 @@
                         <?php if ($job == null) { // if we can't find job, show error.?>
                             <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4">
                                 <p class="font-bold">Something went wrong!</p>
-                                <p class="py-1">Job with Position ID: <?php echo $_GET['posId'] ?> could not be found.</p>
+                                <p class="py-1">Position ID could not be found.</p>
                                 <p>Click <a href="advancedsearchform.php" class="underline">here</a> to go back to the advanced search form <b>OR</b> click <a href="index.php" class="underline">here</a> to go back to the homepage.</p>
                             </div>
-                        <?php } return;?>
+                            <?php return ?>
+                        <?php }?>
                         <tr class="border-b border-gray-400">
                                 <td class="pb-4 w-64 inline-block">Position ID</td>
                                 <td class="pb-4 px-10 text-gray-700 w-full"><?php echo $job->getPosId() ?></td>

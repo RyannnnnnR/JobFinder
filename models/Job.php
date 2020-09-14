@@ -250,6 +250,15 @@
          * Set Is application by email
          * @param mixed $applicationByPost
          */
+        public function setApplicationbyEMail($applicationByMail)
+        {
+            $this->applicationByMail = $applicationByMail;
+        }
+
+        /**
+         * Set Is application by email
+         * @param mixed $applicationByPost
+         */
         public function setApplicationByPost($applicationByPost)
         {
             $this->applicationByPost = $applicationByPost;

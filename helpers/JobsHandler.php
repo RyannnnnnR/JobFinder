@@ -109,7 +109,8 @@
             // Since we are using a message bag paradigm, we need to check isset and empty, since it's a possible outcome.
             // Check date format
             if(isset($_POST['closingDate']) && !empty($_POST['closingDate'])) {
-                if(!preg_match("/\d{2}\/\d{2}\/\d{2}/", $_POST['closingDate'])){
+                // https://www.regextester.com/99555
+                if(!preg_match("/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{2}$/", $_POST['closingDate'])){
                     $errors[] = "invalid_date";
                 }
             }
@@ -159,7 +160,7 @@
             // Don't log empty strings
             if (empty($searchTerm)) return;
             // Don't log any other variation of the same term
-            if (in_array(strtolower($searchTerm), FileHandler::getInstance()->readFile('recent_searches.txt'))) return;
+            if (in_array(strtolower($searchTerm), array_map('strtolower', FileHandler::getInstance()->readFile('recent_searches.txt')))) return;
             FileHandler::getInstance()->writeFile("recent_searches.txt", $searchTerm.PHP_EOL);
         }
 
@@ -168,6 +169,6 @@
          * @return array
          */
         public function getRecentJobSearches() {
-            return array_filter(array_slice(FileHandler::getInstance()->readFile('recent_searches.txt'),0,4));
+            return array_filter(array_slice(FileHandler::getInstance()->readFile('recent_searches.txt'),0,3));
         }
     }
